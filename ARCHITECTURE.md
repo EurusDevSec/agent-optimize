@@ -1,17 +1,17 @@
 # PROJECT ARCHITECTURE & TECH STACK
 
-## 1. Core Tech Stack
-- **Language**: [Specify: TypeScript / Python / Go / Rust]
-- **Framework**: [Specify: Next.js / FastAPI / Express / Spring]
-- **Database & Cache**: [Specify: PostgreSQL / Redis / SQLite]
-- **Testing Framework**: [Specify: Vitest / pytest / Jest]
+## 1. Core Tech Stack (User Defined)
+- **Language**: [Specify primary language(s)]
+- **Framework**: [Specify application framework]
+- **Database & Cache**: [Specify persistence & caching layers]
+- **Testing Framework**: [Specify project test runner]
 
 ## 2. Directory Layout & Layer Topology
-- `src/api/`: Request controllers & route handlers.
-- `src/services/`: Core business logic & domain rules.
-- `src/models/`: Database schemas & ORM entities.
-- `src/utils/`: Shared helper functions and static utilities.
+- Target system entrypoints & routing layer.
+- Core business logic & domain processing layer.
+- Data models, schemas, and persistence layer.
+- Shared utilities, helpers, and middleware.
 
 ## 3. System Workflows & Data Flow
-- **Request Flow**: Client Request → Middleware / Auth → Service Layer → DB / Cache → API Response.
-- **State Management**: Stateless API design with Redis caching layer.
+- **Request Flow**: Input Interface → Validation / Auth → Core Domain Logic → Storage Layer → Response.
+- **State Protocol**: Stateless API / System architecture with caching layer where applicable.
