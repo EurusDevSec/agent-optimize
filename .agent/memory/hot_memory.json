@@ -4,5 +4,8 @@
   "current_task": "Setup repository backbone",
   "last_successful_checkpoint": "Backbone template deployed",
   "active_blockers": [],
-  "learnings": []
+  "learnings": [],
+  "installed_dynamic_skills": [
+    "fetch-skill"
+  ]
 }
