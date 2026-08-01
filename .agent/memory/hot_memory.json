@@ -1,5 +1,5 @@
 {
-  "project_name": "MyNewProject",
+  "project_name": "eurus-agent",
   "active_milestone": "Initialization",
   "current_task": "Setup repository backbone",
   "last_successful_checkpoint": "Backbone template deployed",

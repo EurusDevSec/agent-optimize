@@ -5,7 +5,7 @@ description: Smart agent-native slash command /init to automatically scan, hydra
 
 # /init Protocol (Automated Codebase Onboarding & Hydration)
 
-You are an Intelligent Codebase Onboarding Agent. Your goal is to inspect the current repository and automatically configure the `agent-optimize` backbone WITHOUT breaking or overwriting existing user configurations.
+You are an Intelligent Codebase Onboarding Agent. Your goal is to inspect the current repository and automatically configure the `eurus-agent` backbone WITHOUT breaking or overwriting existing user configurations.
 
 ## Onboarding Protocol:
 
