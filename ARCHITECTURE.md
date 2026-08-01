@@ -1,17 +1,25 @@
-# PROJECT ARCHITECTURE & TECH STACK
+# PROJECT ARCHITECTURE & DESIGN SPECIFICATION
 
-## 1. Core Tech Stack (User Defined)
-- **Language**: [Specify primary language(s)]
-- **Framework**: [Specify application framework]
-- **Database & Cache**: [Specify persistence & caching layers]
-- **Testing Framework**: [Specify project test runner]
+> **Agent Instruction**: This document is the Single Source of Truth for system architecture. Populate and update the sections below during `/init` or `/spec` based on the ACTUAL project codebase.
 
-## 2. Directory Layout & Layer Topology
-- Target system entrypoints & routing layer.
-- Core business logic & domain processing layer.
-- Data models, schemas, and persistence layer.
-- Shared utilities, helpers, and middleware.
+---
 
-## 3. System Workflows & Data Flow
-- **Request Flow**: Input Interface → Validation / Auth → Core Domain Logic → Storage Layer → Response.
-- **State Protocol**: Stateless API / System architecture with caching layer where applicable.
+## 1. Core Tech Stack
+- **Language(s)**: [To be populated by Agent during /init]
+- **Framework(s)**: [To be populated by Agent during /init]
+- **Storage & Caching**: [To be populated by Agent during /init]
+- **Test Runner**: [To be populated by Agent during /init]
+
+## 2. Directory Layout & Module Boundaries
+- [Agent: List key directories and their specific layer responsibilities here]
+
+## 3. System Data Flow & Topology
+
+```mermaid
+%% Agent Instruction: Replace this placeholder with a real Mermaid diagram (flowchart/sequence/graph) matching the project's actual data flow during /init or /spec.
+graph TD
+    Placeholder["Project Architecture Not Yet Hydrated. Run /init or /spec."]
+```
+
+## 4. Key Architectural Invariants
+- [Agent: List non-negotiable architectural rules, e.g. "API layer must never import DB entities directly", "All state changes must emit an audit log"]

@@ -1,6 +1,6 @@
 ---
 name: build
-description: Fast slash command /build to execute task implementation using Diff Blocks
+description: Fast slash command /build to execute task implementation using Diff Blocks and auto-check completed tasks
 argument-hint: [task-number-or-name]
 ---
 
@@ -17,4 +17,5 @@ Focus: $ARGUMENTS
 [replacement code]
 >>>>>>> REPLACE
 
-3. Keep edits minimal and focused strictly on the active task.
+3. **AUTO-CHECK TASK COMPLETION**:
+   Upon completing the diff implementation and passing verification of a task item, IMMEDIATELY update `specs/current-task.md` by changing `- [ ]` to `- [x]` for that specific item.
