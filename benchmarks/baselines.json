@@ -1,0 +1,22 @@
+{
+  "baselines": {
+    "vanilla_harness": {
+      "name": "Vanilla Harness (Default Raw LLM)",
+      "description": "Standard CLI prompt execution without system caching rules or structured state persistence.",
+      "official_docs": "Standard LLM API endpoint completion",
+      "prompt_caching_enabled": false
+    },
+    "addyosmani_agent_skills": {
+      "name": "Addy Osmani Agent-Skills",
+      "description": "Configured strictly according to official github.com/addyosmani/agent-skills specification (.claude/rules/ & static skills/).",
+      "official_docs": "https://github.com/addyosmani/agent-skills",
+      "prompt_caching_enabled": true
+    },
+    "eurus_agent": {
+      "name": "Eurus Agent (eurus-agent)",
+      "description": "Configured according to official eurus-agent specification (dynamic hot_memory.json, /fetch-skill on-demand, 2-retry Circuit Breaker).",
+      "official_docs": "https://github.com/EurusDevSec/eurus-agent",
+      "prompt_caching_enabled": true
+    }
+  }
+}

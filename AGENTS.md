@@ -12,6 +12,7 @@
 
 ## 2. Slash Commands Lifecycle Shortcuts
 - `/init`: Auto-scan, hydrate, and onboard ANY codebase (New or Existing/Legacy).
+- `/benchmark`: Run transparent benchmark suite comparing baselines.
 - `/fetch-skill <keyword>`: Auto-download and register domain skills on-demand from Whitelisted Repos.
 - `/grill-me <topic>`: Pressure-test plan/architecture via interactive interview.
 - `/spec <feature>`: Generate spec in `specs/current-task.md`.
