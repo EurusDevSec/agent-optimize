@@ -1,0 +1,16 @@
+# AGENT INDEXING EXCLUSIONS (Save Token & Scan Noise)
+
+node_modules/
+vendor/
+.git/
+dist/
+build/
+coverage/
+__pycache__/
+*.pyc
+*.log
+.env
+.env.*
+*.zip
+*.tar.gz
+*.sqlite
