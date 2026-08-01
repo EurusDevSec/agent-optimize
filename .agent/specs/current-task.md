@@ -1,12 +1,12 @@
 # CURRENT TASK SPECIFICATION
 
 ## Goal
-Initialize and verify backbone template setup.
+Initialize and verify stack-agnostic backbone template setup.
 
 ## Task Checklist
 - [x] Create `.agent` folder structure
-- [x] Setup static rules and dynamic JSON memory
-- [ ] Customize project-specific settings in `.agent/rules/01-code-style.md`
+- [x] Setup universal principles and dynamic JSON memory
+- [ ] Customize project-specific architecture in `ARCHITECTURE.md`
 
-## Verification Command
-`git status`
+## Verification Strategy
+Project test runner / git status check.

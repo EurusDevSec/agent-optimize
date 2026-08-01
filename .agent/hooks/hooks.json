@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PreToolUse": {
+      "enabled": true,
+      "blocked_patterns": [
+        "rm -rf /",
+        "git push .* --force",
+        "drop database"
+      ],
+      "description": "Safety guard blocking destructive terminal commands"
+    },
+    "PostToolUse": {
+      "enabled": true,
+      "action": "AUTO_FORMAT_NATIVE",
+      "description": "Trigger native project formatter (prettier/cargo fmt/gofmt/ruff) matching modified file extension"
+    }
+  }
+}

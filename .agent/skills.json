@@ -1,0 +1,10 @@
+{
+  "trusted_registries": [
+    "github.com/addyosmani/agent-skills",
+    "github.com/mattpocock/skills",
+    "github.com/anthropic/skills",
+    "github.com/mcp",
+    "github.com/mcpservers"
+  ],
+  "dynamic_search_mode": "SEMANTIC_ON_DEMAND"
+}
