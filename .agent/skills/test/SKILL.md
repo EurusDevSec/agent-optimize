@@ -1,17 +1,18 @@
 ---
 name: test
-description: Fast slash command /test to run test suite and handle failure recovery with diagnostic logs
-argument-hint: [target-module-or-filter]
+description: Fast slash command /test to run test runner with Deterministic Control Plane Human Escalation Protocol
+argument-hint: [test-filter]
 ---
 
-# /test Protocol (Diagnostic Failure Recovery)
+# /test Protocol v2.0 (Deterministic Control Plane Escalation)
 
 Target: $ARGUMENTS
 
-1. Execute project test runner or fast validation scripts (<5s preferred).
-2. If tests pass: update `hot_memory.json` checkpoint (`last_successful_checkpoint`).
-3. If tests fail:
-   - Extract VERBOSE diagnostic output (Expected State vs Actual State).
-   - Log diagnostic output to `.agent/scratchpad.md`.
-   - Attempt 1 minimal Search/Replace Diff fix based on diagnostic evidence.
-4. Circuit Breaker: If test fails 2 times sequentially, STOP immediately and prompt User for intervention.
+1. Execute project test runner / fast validation script (<5s).
+2. If Pass: Update `hot_memory.json` checkpoint.
+3. If Fail Attempt 1: Log diagnostic error output (`Expected vs Actual`) to `scratchpad.md`, attempt 1 minimal diff fix.
+4. **DETERMINISTIC CONTROL PLANE HUMAN ESCALATION (Circuit Breaker 2x)**:
+   If test fails 2 times sequentially, STOP EXECUTION IMMEDIATELY.
+   Do NOT attempt 3rd blind retry. Transition system to **HUMAN ESCALATION STATE**:
+   - Output structured diagnostic error trace to User.
+   - Require explicit User manual command intervention to resume.

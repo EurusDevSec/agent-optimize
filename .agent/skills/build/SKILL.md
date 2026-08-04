@@ -1,10 +1,10 @@
 ---
 name: build
-description: Fast slash command /build to execute implementation using Diff Blocks and Micro-Assertion verification
+description: Fast slash command /build to execute Diff implementation with Trajectory Synchronization and Micro-Assertions
 argument-hint: [task-item]
 ---
 
-# /build Protocol (Assertion-Led Recovery)
+# /build Protocol v2.0 (Trajectory Synchronization)
 
 Focus: $ARGUMENTS
 
@@ -17,7 +17,7 @@ Focus: $ARGUMENTS
 [replacement code]
 >>>>>>> REPLACE
 
-3. **MICRO-ASSERTION FIRST RUN**:
-   Before running full test suites, execute the task's Micro-Assertion check to verify core logic connections.
-4. **AUTO-CHECK COMPLETION**:
-   Upon passing micro-assertion check, update `specs/current-task.md` by changing `- [ ]` to `- [x]`.
+3. **TRAJECTORY SYNCHRONIZATION**:
+   Flush previous outdated file snapshots from context trajectory. Maintain strictly ONE active snapshot per file.
+4. **MICRO-ASSERTION CHECK**: Run micro-assertion test to verify logic boundaries before full test suite.
+5. **AUTO-CHECK**: Update `specs/current-task.md` changing `- [ ]` to `- [x]`.

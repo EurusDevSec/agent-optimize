@@ -1,26 +1,17 @@
-# AGENT BACKBONE INITIALIZATION
+# 💨 EURUS AGENT v2.0 - TIER 1 CONSTITUTION
 
-> **Paper Alignment Note**: Minimalist operational entrypoint (<100 lines). Zero generic code style bloat.
+> **Scope**: Always-On Core Constitution (<60 lines). Maximize 95%+ Prompt Caching discount.
 
-## 1. System Rules & Context Loading
-- Read `README.md` & `WORKFLOW.md` for complete agent operational protocol and state machine algorithm.
-- Read `ARCHITECTURE.md` to understand tech stack, directory layout & data flow.
-- Read `FEATURES.md` for functional roadmap & project scope.
-- Read `.agent/rules/00-core.md` ONCE at startup.
-- Read `.agent/memory/hot_memory.json` to load current project state.
-- Read `.agent/references/definition-of-done.md` for completion criteria.
-- Inspect `.agent/hooks/` for automated pre/post tool triggers.
-- NEVER modify static files (`AGENTS.md`, `ARCHITECTURE.md`, `FEATURES.md`, `.agent/rules/*`) during task execution to preserve Prompt Cache.
+## 1. System Context Architecture
+- **Tier 1 (Constitution)**: Read `AGENTS.md` and `.agent/rules/00-core.md` ONCE at boot.
+- **Tier 2 (Specialist Agents)**: Dynamically trigger agents in `.agent/agents/` based on file regex patterns (`*.sql`, `auth/*`, `tests/*`).
+- **Tier 3 (Knowledge Base)**: Query `.agent/memory/cold_memory.md` & MCP tools ON-DEMAND (`SELECTIVE` strategy).
 
-## 2. Slash Commands Lifecycle Shortcuts
-- `/init`: Auto-scan, hydrate, and onboard ANY codebase (New or Existing/Legacy).
-- `/benchmark`: Run transparent benchmark suite comparing baselines.
-- `/fetch-skill <keyword>`: Auto-download and register domain skills on-demand from Whitelisted Repos (`SELECTIVE` context).
-- `/skeleton <path>`: Extract type annotations & interface signatures (Context Virtualization).
-- `/grill-me <topic>`: Pressure-test plan/architecture via interactive Socratic interview.
-- `/spec <name>`: Define task contract in `.agent/specs/current-task.md`.
-- `/plan`: Deconstruct spec into atomic work checkboxes (`[ ]` < 15 mins each).
-- `/build`: Execute task changes via Search/Replace Diff blocks.
-- `/test`: Run fast local verification runner with 2-retry Circuit Breaker.
-- `/review`: Multi-persona code, security & architecture audit.
-- `/ship`: Validate DoD, sync `hot_memory.json`, and archive spec.
+## 2. Core Execution Commandments
+- **Response Economy**: Keep responses < 3 sentences. Focus 100% on execution.
+- **Diff Standard**: Use ONLY Search & Replace Diff blocks (`<<<<<<< SEARCH`).
+- **Resource Guardrail**: NEVER run 20+ min full builds. Use fast local verification (<5s).
+- **Trajectory Sync**: Flush outdated file snapshots from context trajectory after `/build`.
+
+## 3. Slash Commands Shortcuts
+`/init`, `/spec`, `/plan`, `/build`, `/test`, `/review`, `/simplify`, `/ship`, `/clear`, `/skeleton`, `/fetch-skill`, `/benchmark`, `/grill-me`
