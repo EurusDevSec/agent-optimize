@@ -1,4 +1,4 @@
-# 💨 EURUS AGENT v2.2 (`eurus-agent`)
+# 💨 EURUS AGENT v2.3 (`eurus-agent`)
 
 > **Universal High-Efficiency AI Agentic Backbone Framework**  
 > *SDD 2.0 Executable Contracts · Deterministic Control Plane · Trajectory Synchronization · Three-Tier Codified Context · 95%+ Token Economy*
@@ -11,13 +11,13 @@
 
 ## 🌟 Overview
 
-**`eurus-agent v2.2`** is an advanced, production-grade AI Agent framework designed to transform any codebase into an **AI-Ready Environment**. Grounded in peer-reviewed AI Agent research and SDD 2.0 standards (2026), it eliminates reasoning drift, prevents token bloat, and provides a deterministic control plane for AI coding assistants.
+**`eurus-agent v2.3`** is an advanced, production-grade AI Agent framework designed to transform any codebase into an **AI-Ready Environment**. Grounded in peer-reviewed AI Agent research and SDD 2.0 standards (2026), it eliminates reasoning drift, prevents token bloat, and provides a deterministic control plane for AI coding assistants.
 
 ---
 
 ## 🚀 Download & Installation Guide
 
-Choose your preferred way to install **`eurus-agent v2.2`** into your target project:
+Choose your preferred way to install **`eurus-agent v2.3`** into your target project:
 
 ### ⚡ Method 1: 1-Line Automatic Installer (Recommended & Fastest)
 Open Terminal in your target project directory and paste:
@@ -64,7 +64,14 @@ Launch your preferred AI CLI (`jcode`, `antigravity`, `claude`) in your project 
 
 ## ⚡ Core Feature Matrix
 
-### 📝 1. SDD 2.0 Executable Contracts & Quality Assurance
+### 🎯 1. 4-Level Architectural Hierarchy & Master Roadmap Engine
+- **Master Control Tower (`ROADMAP.md`)**: Automatically initialized by `/init` to manage vĩ mô Phase 1/2/3 milestones and feature lists.
+- **1 Feature = 1 Spec (`SPEC-1.3.md`)**: Dynamic Phase Extraction generating hyper-focused single contiguous Spec Contracts (<500 tokens).
+- **`Spec-Reflector` Real-Time Sync**: Automatically syncs technical design changes back to the Spec file during `/build` (Living Spec).
+- **Hierarchical Task Tree & Checkbox Protection**: Parent Tasks (`Level 2`) auto-computed when 100% Sub-tasks (`Level 3`) checked.
+- **[NEW] File Anchor Protection**: Auto-creates empty files for new targets before diff execution.
+
+### 📝 2. SDD 2.0 Executable Contracts & Quality Assurance
 - **Hybrid Specs (Flat YAML + Gherkin)**: Defines data schemas in Flat YAML to eliminate "Format Tax" and uses Gherkin (`Given/When/Then`) for linear reasoning.
 - **`🥊 /challenge` Adversarial Audit**: Acts as an opposing Principal Engineer to stress-test specs for architectural feasibility and edge cases before unlocking `/plan`.
 - **`[NEEDS CLARIFICATION]` Freeze Pass**: Automatically freezes planning and asks structured clarification questions when user prompts are underspecified.
@@ -150,7 +157,7 @@ flowchart TD
 
 ## 📚 Research References & Open-Source Foundations
 
-`eurus-agent v2.2` synthesizes best practices from leading open-source projects and peer-reviewed AI Agent research:
+`eurus-agent v2.3` synthesizes best practices from leading open-source projects and peer-reviewed AI Agent research:
 
 1. 🌟 **Addy Osmani (2026)** — *"Agent Skills Repository & Architecture"* ([`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills)).
    - *Applied*: Composable layers of Skills (`skills/`), Personas (`agents/`), Slash Commands, and Definition of Done standards.

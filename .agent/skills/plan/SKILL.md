@@ -1,13 +1,15 @@
 ---
 name: plan
-description: Fast slash command /plan to deconstruct spec into atomic work items with Micro-Assertion checks
-argument-hint: [spec-name]
+description: Design HOW & Tasks - Append Technical Architecture File Topology and Hierarchical Work Matrix [NEW] to Spec
+argument-hint: []
 ---
 
-# /plan Protocol (Assertion-Led Planning)
+# /plan Protocol v2.3 (Design HOW & Task Tree Matrix)
 
-1. Read `.agent/specs/current-task.md`.
-2. Deconstruct spec into atomic tasks (< 15 mins work each).
-3. **MANDATORY MICRO-ASSERTION REQUIREMENT**:
-   For each task item, mandate a Micro-Assertion check to catch silent logic failures (e.g., `assert output.status_code == 200`, `assert isinstance(data, dict)`).
-4. Populate `.agent/specs/current-task.md` with atomic checkboxes `[ ]`.
+1. Read approved Spec Contract `.agent/specs/SPEC-<id>_<feature_name>.md`.
+2. Append `# 📝 3. WORK CHECKPOINT MATRIX`:
+   - **Level 2 Parent Tasks**: Grouped by architectural components (e.g. Task 1: Controller, Task 2: Route).
+   - **Level 3 Sub-Task Checkboxes `- [ ]`**:
+     - Flag new files with `[NEW] src/path/file.ts` to prevent anchor lost crashes.
+     - Include File Target and Micro-Assertion command (`npm test <isolated_file>`).
+3. Set active task pointer in `.agent/memory/hot_memory.json`.

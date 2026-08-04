@@ -1,17 +1,15 @@
 ---
 name: challenge
-description: Adversarial Principal Engineer audit to stress-test spec feasibility, edge cases, and schema alignment before unlocking /plan
-argument-hint: [spec-name]
+description: Adversarial Principal Engineer audit to stress-test spec for architectural & edge-case risks before /plan
+argument-hint: []
 ---
 
-# /challenge Protocol v2.1 (Principal Engineer Adversarial Audit)
+# /challenge Protocol v2.3 (Adversarial Spec Audit)
 
-1. Read `.agent/specs/current-task.md`.
-2. **Adversarial Audit**:
-   Act as a critical Principal Engineer. Identify at least 2 potential architectural flaws, edge cases, or schema mismatches in the spec:
-   - *Are schema types aligned with current database models?*
-   - *Are error/boundary conditions handled explicitly?*
-   - *Are there hidden performance or security regressions?*
-3. **Verdict**:
-   - If flaws identified: Update `.agent/specs/current-task.md` with explicit remediation notes and request spec adjustment.
-   - If spec passes audit: Append `## Principal Engineer Audit: PASSED` to spec and unlock `/plan`.
+1. Read active Spec Contract `.agent/specs/SPEC-<id>_<feature_name>.md`.
+2. Perform adversarial audit across 3 dimensions:
+   - Edge Cases & Missing Validation in Gherkin Scenarios.
+   - Schema Type Safety & Performance in Flat YAML.
+   - Negative Space Boundary Security & Side-Effect Risks.
+3. Auto-patch identified flaws into the Spec Contract.
+4. Output audit report and unlock `/plan`.

@@ -1,36 +1,16 @@
 ---
 name: init
-description: Smart agent-native slash command /init to automatically scan, hydrate, and onboard ANY codebase (New or Existing/Legacy) with zero language dependencies
+description: Onboard project and hydrate Master Roadmap (.agent/docs/ROADMAP.md) and architecture topology
+argument-hint: []
 ---
 
-# /init Protocol (Automated Codebase Onboarding & Hydration)
+# /init Protocol v2.3 (Master Roadmap Hydration)
 
-You are an Intelligent Codebase Onboarding Agent. Your goal is to inspect the current repository and automatically configure the `eurus-agent` backbone WITHOUT breaking or overwriting existing user configurations.
-
-## Onboarding Protocol:
-
-### Step 1: Detect Project Scenario
-- Inspect directory for existing source files, build manifests (`package.json`, `pyproject.toml`, `Cargo.toml`, `go.mod`, `Makefile`, etc.), and git history.
-- **Scenario A (Fresh Project)**: No code exists. Initialize clean defaults in `hot_memory.json` and prompt user to run `/spec`.
-- **Scenario B (Existing/Legacy Project)**: Codebase exists. Proceed to Hydration Steps below.
-
-### Step 2: Codebase Hydration (For Existing Projects)
-1. **Analyze Tech Stack & Structure**:
-   - Inspect build manifests & dependencies.
-   - Populate `.agent/docs/ARCHITECTURE.md` across all 4 standard sections (Core Tech Stack, Directory Layout, System Data Flow Mermaid Diagram, Key Invariants) based on actual project topology.
-2. **Analyze Features & Tests**:
-   - Run existing test suite / inspect passing tests.
-   - Populate `.agent/docs/FEATURES.md` with completed features `[x]` (passing tests) vs in-progress features `[ ]`.
-3. **Hydrate Hot Memory (`hot_memory.json`)**:
-   - Read `git log -n 5` to set `last_successful_checkpoint` to the latest commit summary.
-4. **HYDRATE COLD MEMORY (`cold_memory.md`) - CRITICAL**:
-   - Extract historical Architectural Decision Records (ADRs), major refactors, and core design patterns from git log & existing docs.
-   - Append initial baseline architecture ADR to `.agent/memory/cold_memory.md` for permanent reference.
-
-### Step 3: Preserved Integration & Auto-Ignore
-1. **Zero Overwrite**: Never overwrite or delete user source files or existing linter/formatter configs (`.prettierrc`, `tsconfig.json`, `eslint`).
-2. **Update `.gitignore`**: Ensure `.agent/scratchpad.md` and `.agent/specs/current-task.md` are appended to the project's `.gitignore` if not already present.
-3. **Adapt Hooks**: Inspect existing project formatter/linter and ensure `.agent/hooks/post_edit_format.py` uses the project's native formatter.
-
-### Step 4: User Confirmation
-Present a concise summary of detected architecture, features, and cold memory baseline to the user.
+1. Scan codebase root, git history, package manifests, and existing structure.
+2. Hydrate **Level 0 Master Control Tower** (`.agent/docs/ROADMAP.md`):
+   - **Problem Statement & Vision**: Executive summary of system goals.
+   - **Tech Stack & System Boundaries**: Technology selections & core constraints.
+   - **Multi-Phase Roadmap**: Phase 1, Phase 2, Phase 3 with explicitly listed Features.
+3. Hydrate `.agent/docs/ARCHITECTURE.md` and `.agent/docs/FEATURES.md`.
+4. Hydrate `.agent/memory/hot_memory.json` and append baseline ADRs to `.agent/memory/cold_memory.md`.
+5. Ensure transient scratch files are in `.gitignore`.

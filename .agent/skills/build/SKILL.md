@@ -1,20 +1,15 @@
 ---
 name: build
-description: Fast slash command /build with Pre-emptive Pre-Build Boundary Audit and Trajectory Synchronization
-argument-hint: [task-item]
+description: Execute Level 3 sub-tasks via Diff blocks with Spec-Reflector 2-way sync and parent checkbox computation
+argument-hint: [sub-task-item]
 ---
 
-# /build Protocol v2.2 (Pre-emptive Boundary Audit)
+# /build Protocol v2.2 (Spec-Reflector & Diff Execution)
 
-Focus: $ARGUMENTS
-
-1. Read `.agent/specs/current-task.md` and `.agent/scratchpad.md`.
-2. **PRE-EMPTIVE BOUNDARY AUDIT**:
-   Before generating or executing Diff blocks, extract target file paths.
-   Cross-reference target files against `# Out of Scope & Boundaries` in spec.
-   **IF TARGET IS IN OUT-OF-SCOPE LIST**:
-   ABORT DIFF EXECUTION IMMEDIATELY. Output: `[PRE-EMPTIVE BOUNDARY STRIKE: Target file prohibited by Negative Space Boundaries]`.
-3. Implement code changes ONLY using Search & Replace Diff blocks:
+1. Read active Spec Contract `.agent/specs/SPEC-<id>_<feature_name>.md`.
+2. **PRE-EMPTIVE BOUNDARY AUDIT**: Intercept diffs targeting `⛔ Negative Space Boundaries`.
+3. **[NEW] FILE ANCHOR PROTECTION**: If target sub-task is flagged `[NEW]`, automatically touch/create empty file before diff execution.
+4. Execute code changes using Search & Replace Diff blocks:
 
 <<<<<<< SEARCH
 [exact original code]
@@ -22,6 +17,6 @@ Focus: $ARGUMENTS
 [replacement code]
 >>>>>>> REPLACE
 
-4. **TRAJECTORY SYNCHRONIZATION**: Flush outdated file snapshots.
-5. **MICRO-ASSERTION CHECK**: Execute task micro-assertion.
-6. **AUTO-CHECK**: Change `- [ ]` to `- [x]` in `specs/current-task.md`.
+5. **SPEC-REFLECTOR 2-WAY SYNC**: If diff alters code structure/types, automatically update `# 📐 2. TECHNICAL ARCHITECTURE` in real-time to maintain a Living Spec.
+6. **DETERMINISTIC PARENT CHECKBOX COMPUTATION**: Agent ONLY ticks Level 3 sub-tasks (`- [x]`). Eurus Engine automatically checks Parent Task (`Level 2`) when 100% of children are checked.
+7. **TRAJECTORY SYNCHRONIZATION**: Flush outdated file snapshots.

@@ -1,18 +1,19 @@
 ---
 name: spec
-description: Fast slash command /spec to generate Hybrid Spec Contract with Gherkin Syntax and Clarification Freeze
-argument-hint: <task-description>
+description: Dynamic Phase Extraction - Define WHAT to build (User Stories, Gherkin Scenarios, Flat YAML, 3 Negative Bounds)
+argument-hint: [feature-name]
 ---
 
-# /spec Protocol v2.0 (SDD 2.0 Executable Contract)
+# /spec Protocol v2.3 (Single Feature Spec Engine)
 
-Description: $ARGUMENTS
+Focus: $ARGUMENTS
 
-1. Inspect prompt intent. If underspecified or Confidence < 90%:
-   - OUTPUT SIGNAL: `[NEEDS CLARIFICATION]`
-   - Return structured JSON array of clarifying questions to User.
-   - FREEZE execution until User provides answers.
-2. Once clarified, populate `.agent/specs/current-task.md` using **Hybrid Format**:
-   - Flat YAML for API Contracts and Schemas.
-   - Gherkin Syntax (`Scenario / Given / When / Then`) for Acceptance Criteria.
-   - Mandate `# Out of Scope & Boundaries` with 3 explicit negative bounds.
+1. Read `.agent/docs/ROADMAP.md` to identify the active incomplete Feature.
+2. Generate single contiguous Spec Contract `.agent/specs/SPEC-<id>_<feature_name>.md`:
+   - `# 🎯 1. BUSINESS REQUIREMENTS & GHERKIN`
+     - User Story (Business goal).
+     - Acceptance Criteria (`Given / When / Then` Gherkin scenarios).
+   - `# 📐 2. TECHNICAL ARCHITECTURE & NEGATIVE SPACE`
+     - API Flat YAML Schema (Endpoint, Method, Request/Response).
+     - `⛔ Negative Space Boundaries`: 3 explicit negative bounds.
+3. Lock Spec Contract and notify user to run `/challenge` for adversarial audit.
