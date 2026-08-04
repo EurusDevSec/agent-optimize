@@ -56,41 +56,23 @@ Launch your preferred AI CLI (`jcode`, `antigravity`, `claude`) and run:
 
 ---
 
-## 📚 Research References & Scientific Foundations
+---
 
-`eurus-agent v2.0` is engineered directly upon findings from peer-reviewed AI Agent research:
+## 📚 Research References & Open-Source Foundations
 
-1. 📄 **Việt Trần (2026)** — *"Tối ưu Coding Agent Codebase: 7 Best Practices Cho Dev"* (`goclaw.sh`).
+`eurus-agent v2.0` synthesizes best practices from leading open-source projects and peer-reviewed AI Agent research:
+
+1. 🌟 **Addy Osmani (2026)** — *"Agent Skills Repository & Architecture"* ([`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills)).
+   - *Applied*: Composable layers of Skills (`skills/`), Personas (`agents/`), Slash Commands, and Definition of Done standards.
+2. 🌟 **Matt Pocock (2026)** — *"Productivity & Interactive Agent Skills"* ([`mattpocock/skills`](https://github.com/mattpocock/skills)).
+   - *Applied*: Interactive Socratic stress-testing and architecture pressure-testing skill (`/grill-me`).
+3. 📄 **Việt Trần (2026)** — *"Tối ưu Coding Agent Codebase: 7 Best Practices Cho Dev"* ([`goclaw.sh`](https://goclaw.sh/vi/blog/coding-agent-codebase)).
    - *Applied*: Fast local validation (<5s), verbose assertion diagnostics (`Expected vs Actual`), and single source of truth documentation.
-2. 📄 **Prakhar Khatri (2026)** — *"Do Context Files Help Coding Agents? A Two-Agent Ablation Study on Real Repositories"* (`arXiv:2607.27250`).
+4. 📄 **Prakhar Khatri (2026)** — *"Do Context Files Help Coding Agents? A Two-Agent Ablation Study on Real Repositories"* ([`arXiv:2607.27250`](https://arxiv.org/abs/2607.27250)).
    - *Applied*: Minimalist prompt entrypoint (<60 lines), `SELECTIVE` dynamic context fetching, and procedural resource guardrails.
-3. 📄 **CORVUS Research (July 2026)** — *"CORVUS: Context Optimization and Reduction Via Underlying Synced Trajectories"*.
+5. 📄 **CORVUS Research (July 2026)** — *"CORVUS: Context Optimization and Reduction Via Underlying Synced Trajectories"*.
    - *Applied*: Trajectory Synchronization—automatically deduplicating outdated file snapshots from conversation context.
-4. 📄 **Control Plane Research (June 2026)** — *"A Deterministic Control Plane for LLM Coding Agents"*.
+6. 📄 **Control Plane Research (June 2026)** — *"A Deterministic Control Plane for LLM Coding Agents"*.
    - *Applied*: Deterministic Control Plane—package installation whitelisting and Human Escalation State on Circuit Breaker triggers.
-5. 📄 **Codified Context Research (February 2026)** — *"Codified Context: Infrastructure for AI Agents in a Complex Domain"*.
+7. 📄 **Codified Context Research (February 2026)** — *"Codified Context: Infrastructure for AI Agents in a Complex Domain"*.
    - *Applied*: Three-Tier Codified Context (Tier 1 Constitution -> Tier 2 Regex-Triggered Specialists -> Tier 3 On-Demand Knowledge).
-
----
-
-## ⚡ Slash Commands Cheat Sheet
-
-| Command | Description |
-| :--- | :--- |
-| **`/init`** | Auto-scan, hydrate, and onboard any codebase (New or Existing/Legacy). |
-| **`/grill-me`** | Socratic learning interview to stress-test architecture & edge-cases. |
-| **`/fetch-skill`**| Semantically search, discover, and install domain skills on-demand. |
-| **`/skeleton`** | Context Virtualization: Extract type annotations & class signatures (-85% tokens). |
-| **`/spec`** | Create formal task contract in `.agent/specs/current-task.md`. |
-| **`/plan`** | Deconstruct spec into atomic work checkboxes `[ ]` with Micro-Assertions. |
-| **`/build`** | Implement changes via Diff blocks with Trajectory Synchronization. |
-| **`/test`** | Run verification with Deterministic Control Plane Human Escalation. |
-| **`/review`** | Multi-persona audit (Architect + Security Auditor + DB Expert). |
-| **`/ship`** | Validate DoD, sync `hot_memory.json`, and archive spec. |
-| **`/benchmark`** | Run transparent, scientifically neutral benchmark suite locally. |
-
----
-
-## 📜 License & Author
-
-Developed with ❤️ by **EurusDevSec**. Built for developers who demand high-speed, zero-drift AI agent execution.
