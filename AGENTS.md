@@ -1,5 +1,7 @@
 # AGENT BACKBONE INITIALIZATION
 
+> **Paper Alignment Note**: Minimalist operational entrypoint (<100 lines). Zero generic code style bloat.
+
 ## 1. System Rules & Context Loading
 - Read `README.md` & `WORKFLOW.md` for complete agent operational protocol and state machine algorithm.
 - Read `ARCHITECTURE.md` to understand tech stack, directory layout & data flow.
@@ -13,18 +15,11 @@
 ## 2. Slash Commands Lifecycle Shortcuts
 - `/init`: Auto-scan, hydrate, and onboard ANY codebase (New or Existing/Legacy).
 - `/benchmark`: Run transparent benchmark suite comparing baselines.
-- `/fetch-skill <keyword>`: Auto-download and register domain skills on-demand from Whitelisted Repos.
-- `/grill-me <topic>`: Pressure-test plan/architecture via interactive interview.
-- `/spec <feature>`: Generate spec in `specs/current-task.md`.
-- `/plan`: Break spec into atomic task checklist in `specs/current-task.md`.
-- `/build`: Implement task using Search/Replace Diff blocks.
-- `/test`: Run test suite & handle failure recovery.
-- `/review`: Audit code for bugs, security & performance.
-- `/simplify`: Refactor & simplify complex code.
-- `/ship`: Commit task, update `hot_memory.json` checkpoint & archive spec.
-
-## 3. Core Execution Protocol (Spec → Diff → Verify)
-1. **Plan First**: Never write code without reading `specs/current-task.md` or running `/spec` / `/plan`.
-2. **Scratchpad Thinking**: Draft solutions & log test output in `.agent/scratchpad.md`.
-3. **Diff Enforcement**: Output code modifications ONLY in Search & Replace Diff blocks.
-4. **Verification Gate**: Auto-run test suite after editing. Stop & log to scratchpad if failed twice.
+- `/fetch-skill <keyword>`: Auto-download and register domain skills on-demand from Whitelisted Repos (`SELECTIVE` context).
+- `/grill-me <topic>`: Pressure-test plan/architecture via interactive Socratic interview.
+- `/spec <name>`: Define task contract in `.agent/specs/current-task.md`.
+- `/plan`: Deconstruct spec into atomic work checkboxes (`[ ]` < 15 mins each).
+- `/build`: Execute task changes via Search/Replace Diff blocks.
+- `/test`: Run fast local verification runner with 2-retry Circuit Breaker.
+- `/review`: Multi-persona code, security & architecture audit.
+- `/ship`: Validate DoD, sync `hot_memory.json`, and archive spec.

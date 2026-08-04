@@ -1,10 +1,7 @@
 # CORE EXECUTION & TOKEN BUDGET RULES
 
-## Response Economy
+## 1. Response Economy & Diff Output Standard
 - Be concise. Keep textual responses under 3 sentences. Focus 100% on code and terminal execution.
-- No conversational filler ("Sure, I can help...", "Here is the code...").
-
-## Diff Block Output Standard
 - NEVER rewrite entire source files. Always use precise Search & Replace Diff blocks:
 
 <<<<<<< SEARCH
@@ -13,7 +10,10 @@
 [new replacement code chunk]
 >>>>>>> REPLACE
 
-## Anti-Loop & Verification Safety
-- Max terminal retries: 2 attempts.
-- If a test/build command fails 2 times sequentially: STOP immediately, record root cause in `.agent/scratchpad.md`, and prompt User for intervention.
-- Prohibited tools: DO NOT run unconstrained `cat` or `find` over large directories. Use `ripgrep` (`rg`) and `fd` instead.
+## 2. Procedural Resource Guardrails (Efficiency Optimization)
+- NEVER run monolithic build pipelines, un-targeted 20+ minute integration test suites, or full container rebuilds during iterative coding.
+- ALWAYS run targeted, isolated local verification scripts (<5 seconds execution time) matching the modified module.
+
+## 3. Selective Context Strategy (Anti-Bloat)
+- Do NOT dump static wiki files or un-needed skills into the prompt.
+- Dynamically load context files on-demand (`SELECTIVE` strategy) using `/fetch-skill` or target file reads.
