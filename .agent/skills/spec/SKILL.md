@@ -1,14 +1,18 @@
 ---
 name: spec
-description: Fast slash command /spec to generate feature specification and acceptance criteria
-argument-hint: <feature-description>
+description: Fast slash command /spec to generate Hybrid Spec Contract with Gherkin Syntax and Clarification Freeze
+argument-hint: <task-description>
 ---
 
-# /spec Protocol
+# /spec Protocol v2.0 (SDD 2.0 Executable Contract)
 
-Task: $ARGUMENTS
+Description: $ARGUMENTS
 
-1. Inspect project scope in `ARCHITECTURE.md` and `FEATURES.md`.
-2. Generate `specs/current-task.md` with clear User Requirements & Goal.
-3. List Affected Files and Verification Criteria.
-4. Stop for User Approval before proceeding to /plan or /build.
+1. Inspect prompt intent. If underspecified or Confidence < 90%:
+   - OUTPUT SIGNAL: `[NEEDS CLARIFICATION]`
+   - Return structured JSON array of clarifying questions to User.
+   - FREEZE execution until User provides answers.
+2. Once clarified, populate `.agent/specs/current-task.md` using **Hybrid Format**:
+   - Flat YAML for API Contracts and Schemas.
+   - Gherkin Syntax (`Scenario / Given / When / Then`) for Acceptance Criteria.
+   - Mandate `# Out of Scope & Boundaries` with 3 explicit negative bounds.
