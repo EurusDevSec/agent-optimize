@@ -1,15 +1,20 @@
 ---
 name: build
-description: Fast slash command /build to execute Diff implementation with Trajectory Synchronization and Micro-Assertions
+description: Fast slash command /build with Pre-emptive Pre-Build Boundary Audit and Trajectory Synchronization
 argument-hint: [task-item]
 ---
 
-# /build Protocol v2.0 (Trajectory Synchronization)
+# /build Protocol v2.2 (Pre-emptive Boundary Audit)
 
 Focus: $ARGUMENTS
 
 1. Read `.agent/specs/current-task.md` and `.agent/scratchpad.md`.
-2. Implement code changes ONLY using Search & Replace Diff blocks:
+2. **PRE-EMPTIVE BOUNDARY AUDIT**:
+   Before generating or executing Diff blocks, extract target file paths.
+   Cross-reference target files against `# Out of Scope & Boundaries` in spec.
+   **IF TARGET IS IN OUT-OF-SCOPE LIST**:
+   ABORT DIFF EXECUTION IMMEDIATELY. Output: `[PRE-EMPTIVE BOUNDARY STRIKE: Target file prohibited by Negative Space Boundaries]`.
+3. Implement code changes ONLY using Search & Replace Diff blocks:
 
 <<<<<<< SEARCH
 [exact original code]
@@ -17,7 +22,6 @@ Focus: $ARGUMENTS
 [replacement code]
 >>>>>>> REPLACE
 
-3. **TRAJECTORY SYNCHRONIZATION**:
-   Flush previous outdated file snapshots from context trajectory. Maintain strictly ONE active snapshot per file.
-4. **MICRO-ASSERTION CHECK**: Run micro-assertion test to verify logic boundaries before full test suite.
-5. **AUTO-CHECK**: Update `specs/current-task.md` changing `- [ ]` to `- [x]`.
+4. **TRAJECTORY SYNCHRONIZATION**: Flush outdated file snapshots.
+5. **MICRO-ASSERTION CHECK**: Execute task micro-assertion.
+6. **AUTO-CHECK**: Change `- [ ]` to `- [x]` in `specs/current-task.md`.

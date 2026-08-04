@@ -1,4 +1,4 @@
-# 💨 EURUS AGENT v2.1 (`eurus-agent`)
+# 💨 EURUS AGENT v2.2 (`eurus-agent`)
 
 > **Universal High-Efficiency AI Agentic Backbone Framework**  
 > *SDD 2.0 Executable Contracts · Deterministic Control Plane · Trajectory Synchronization · Three-Tier Codified Context · 95%+ Token Economy*
@@ -11,7 +11,7 @@
 
 ## 🌟 Overview
 
-**`eurus-agent v2.1`** is an advanced, production-grade AI Agent framework designed to transform any codebase into an **AI-Ready Environment**. Grounded in peer-reviewed AI Agent research and SDD 2.0 standards (2026), it eliminates reasoning drift, prevents token bloat, and provides a deterministic control plane for AI coding assistants.
+**`eurus-agent v2.2`** is an advanced, production-grade AI Agent framework designed to transform any codebase into an **AI-Ready Environment**. Grounded in peer-reviewed AI Agent research and SDD 2.0 standards (2026), it eliminates reasoning drift, prevents token bloat, and provides a deterministic control plane for AI coding assistants.
 
 ---
 
@@ -92,7 +92,7 @@ flowchart TD
 | **`/ship`** | Synthesis | Validate DoD, compute `spec_checksum`, sync `hot_memory.json`, and archive. |
 | **`/save`** | Memory Persistence | Snapshot session state, modified files, and failure lessons before switching chat. |
 | **`/resume`** | Memory Persistence | Hydrate fresh chat session in <1s from `hot_memory.json` & `cold_memory.md`. |
-| **`/skeleton`**| Virtualization | Context Virtualization: Extract type annotations & class signatures (-85% tokens). |
+| **`/skeleton`**| Virtualization | Context Virtualization with `--depth` control (`signatures` vs `full`). |
 | **`/fetch-skill`**| Semantic Tools | Semantically search, discover, and install domain skills on-demand. |
 | **`/grill-me`** | Learning | Socratic interview to stress-test architecture & edge-cases. |
 | **`/benchmark`**| Neutral Testing | Run transparent, scientifically neutral benchmark suite locally. |
@@ -102,7 +102,7 @@ flowchart TD
 
 ## 📚 Research References & Open-Source Foundations
 
-`eurus-agent v2.1` synthesizes best practices from leading open-source projects and peer-reviewed AI Agent research:
+`eurus-agent v2.2` synthesizes best practices from leading open-source projects and peer-reviewed AI Agent research:
 
 1. 🌟 **Addy Osmani (2026)** — *"Agent Skills Repository & Architecture"* ([`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills)).
    - *Applied*: Composable layers of Skills (`skills/`), Personas (`agents/`), Slash Commands, and Definition of Done standards.

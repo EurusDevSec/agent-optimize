@@ -1,16 +1,14 @@
 ---
 name: skeleton
-description: Context Virtualization skill to extract type annotations, class signatures, and function headers without loading full source code
-argument-hint: <file-or-directory-path>
+description: Context Virtualization skill with --depth control flag (-85% tokens for signatures, full for core files)
+argument-hint: <file-or-dir-path> [--depth=signatures|full]
 ---
 
-# /skeleton Protocol (Context Virtualization)
+# /skeleton Protocol v2.2 (Granular Virtualization Control)
 
 Target: $ARGUMENTS
 
-1. **Extract Signatures Only**: Read target file/directory and extract ONLY:
-   - Class declarations & docstrings.
-   - Function signatures & Type Annotations (e.g. `def process(user_id: int) -> Dict[str, Any]:`).
-   - Exported interfaces and constants.
-2. **Omit Implementation**: Omit function bodies and internal logic loops (`...` or `pass`).
-3. **Token Savings**: Reduces input token size by 85% while providing 100% of the required interface contract.
+1. **Parse Depth Flag**:
+   - `--depth=signatures` (default): Extract Class declarations, function headers, docstrings, and Type Annotations. Omit function bodies (`...`). Cuts tokens by 85%.
+   - `--depth=full`: Retain complete implementation code for complex metaprogrammed, decorated, or core side-effect files.
+2. **Output Virtualized View**: Write skeleton to temporary virtual buffer for Agent prompt context.

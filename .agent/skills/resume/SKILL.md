@@ -1,18 +1,18 @@
 ---
 name: resume
-description: Hydrate a fresh chat session in <1 second from hot_memory.json, cold_memory.md, and current spec with 0% hallucination
+description: Hydrate fresh chat session with Git Checksum validation to prevent stale context drift
 argument-hint: []
 ---
 
-# /resume Protocol (Zero-Hallucination Session Hydration)
+# /resume Protocol v2.2 (Git Drift Validation)
 
-1. Read `.agent/memory/hot_memory.json` to load current project state.
-2. Read `.agent/specs/current-task.md` to load active task contract and remaining `[ ]` checkboxes.
-3. Read `.agent/memory/cold_memory.md` to load recent failure workarounds & architectural decisions.
-4. **Synthesize Active Context**:
-   - Output summary:
-     - 📌 **Active Task**: [task_name]
-     - 🎯 **Checkpoint**: [last_successful_checkpoint]
-     - 📋 **Remaining Work**: [list of unchecked [ ] tasks]
-     - 💡 **Key Learnings**: [top 2 recent learnings from cold memory]
-   - State: *"Session restored cleanly! Ready to execute next task item."*
+1. Read `.agent/memory/hot_memory.json`.
+2. **Validate Git Checksum**:
+   - Compare recorded `git_commit_hash` with current `git rev-parse HEAD`.
+   - Compare recorded `git_dirty_status` with current `git status --porcelain`.
+   - **IF DRIFT DETECTED**:
+     Output warning: `[GIT DRIFT DETECTED: Local branch/files changed since /save]`.
+     Refuse to load stale memory blindly. Trigger automatic quick `/init` re-verification scan.
+3. **IF VALIDATED**:
+   - Load task contract and unchecked `[ ]` items from `.agent/specs/current-task.md`.
+   - Report: *"Session restored cleanly! Active task verified against Git HEAD."*
