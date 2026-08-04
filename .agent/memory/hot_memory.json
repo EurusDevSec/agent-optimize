@@ -1,17 +1,21 @@
 {
-  "project_name": "eurus-agent",
-  "active_milestone": "Initialization",
-  "current_task": "Setup repository backbone",
-  "last_successful_checkpoint": "Backbone template deployed",
-  "active_blockers": [],
-  "learnings": [],
-  "installed_dynamic_skills": [
-    "fetch-skill"
-  ],
-  "token_telemetry": {
-    "last_command_tokens": 1900,
-    "total_task_tokens": 3800,
-    "token_limit_alert_threshold": 50000,
-    "alert_status": "NORMAL"
+  "version": "v2.3",
+  "status": "IDLE",
+  "active_pointers": {
+    "roadmap": ".agent/docs/ROADMAP.md",
+    "active_spec": ".agent/specs/SPEC-01_auth_login.md",
+    "active_phase": "Phase 1: Core Authentication",
+    "active_feature": "Feature 1.3: User Login API"
+  },
+  "git_context": {
+    "branch": "main",
+    "last_commit": "df55887",
+    "dirty_status": "clean"
+  },
+  "memory_links": {
+    "architecture": ".agent/docs/ARCHITECTURE.md",
+    "features": ".agent/docs/FEATURES.md",
+    "cold_memory": ".agent/memory/cold_memory.md",
+    "archived_specs": ".agent/specs/archive/"
   }
 }
