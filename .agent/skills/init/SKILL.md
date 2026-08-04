@@ -17,10 +17,10 @@ You are an Intelligent Codebase Onboarding Agent. Your goal is to inspect the cu
 ### Step 2: Codebase Hydration (For Existing Projects)
 1. **Analyze Tech Stack & Structure**:
    - Inspect build manifests & dependencies.
-   - Populate `ARCHITECTURE.md` across all 4 standard sections (Core Tech Stack, Directory Layout, System Data Flow Mermaid Diagram, Key Invariants) based on actual project topology.
+   - Populate `.agent/docs/ARCHITECTURE.md` across all 4 standard sections (Core Tech Stack, Directory Layout, System Data Flow Mermaid Diagram, Key Invariants) based on actual project topology.
 2. **Analyze Features & Tests**:
    - Run existing test suite / inspect passing tests.
-   - Populate `FEATURES.md` with completed features `[x]` (passing tests) vs in-progress features `[ ]`.
+   - Populate `.agent/docs/FEATURES.md` with completed features `[x]` (passing tests) vs in-progress features `[ ]`.
 3. **Hydrate Hot Memory (`hot_memory.json`)**:
    - Read `git log -n 5` to set `last_successful_checkpoint` to the latest commit summary.
 4. **HYDRATE COLD MEMORY (`cold_memory.md`) - CRITICAL**:
