@@ -15,6 +15,53 @@
 
 ---
 
+## 🚀 Download & Installation Guide
+
+Choose your preferred way to install **`eurus-agent v2.2`** into your target project:
+
+### ⚡ Method 1: 1-Line Automatic Installer (Recommended & Fastest)
+Open Terminal in your target project directory and paste:
+
+- **Windows (PowerShell)**:
+  ```powershell
+  irm https://raw.githubusercontent.com/EurusDevSec/eurus-agent/main/install.ps1 | iex
+  ```
+- **Linux / macOS (Bash)**:
+  ```bash
+  curl -fsSL https://raw.githubusercontent.com/EurusDevSec/eurus-agent/main/install.sh | bash
+  ```
+
+---
+
+### 📦 Method 2: Direct Git Clone or Submodule
+
+- **Clone directly into target project**:
+  ```bash
+  git clone --depth 1 https://github.com/EurusDevSec/eurus-agent.git temp_eurus && cp -r temp_eurus/.agent .agent && cp temp_eurus/AGENTS.md . && rm -rf temp_eurus
+  ```
+- **Add as a Git Submodule**:
+  ```bash
+  git submodule add https://github.com/EurusDevSec/eurus-agent.git .agent
+  ```
+
+---
+
+### 💾 Method 3: Direct ZIP Download (No Git Needed)
+
+1. Open GitHub repository: [`https://github.com/EurusDevSec/eurus-agent`](https://github.com/EurusDevSec/eurus-agent).
+2. Click the green **`Code`** button ➔ Select **`Download ZIP`**.
+3. Extract ZIP and copy `.agent/` folder + `AGENTS.md` into your project root.
+
+---
+
+### 🏁 Step 2: Initialize & Onboard (`/init`)
+Launch your preferred AI CLI (`jcode`, `antigravity`, `claude`) in your project and run:
+```text
+/init
+```
+
+---
+
 ## ⚡ Core Feature Matrix
 
 ### 📝 1. SDD 2.0 Executable Contracts & Quality Assurance
