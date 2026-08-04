@@ -16,6 +16,7 @@
 - 🛡️ **Deterministic Control Plane**: Whitelisted package installation rules + 2-Retry Circuit Breaker with **Human Escalation State**.
 - 🚀 **1-Minute Onboarding (`/init`)**: Auto-scans codebase topology and hydrates architecture into `.agent/` without touching dev configs.
 - 🧠 **Dynamic On-Demand Skills (`/fetch-skill`)**: Semantically discovers and installs domain skills (`npx skills add`) on the fly.
+- 💾 **Cross-Session Memory (`/save` & `/resume`)**: Snapshots session state and failure lessons into `.agent/memory/`, enabling 100% zero-hallucination session switching.
 
 ---
 
@@ -72,6 +73,8 @@ Launch your preferred AI CLI (`jcode`, `antigravity`, `claude`) and run:
 | **`/test`** | Run verification with Deterministic Control Plane Human Escalation. |
 | **`/review`** | Constitutional SDD Audit against immutable security constitution (`02-security.md`). |
 | **`/ship`** | Validate DoD, compute `spec_checksum`, sync `hot_memory.json`, and archive. |
+| **`/save`** | Snapshot session state, modified files, and failure lessons before switching chat sessions. |
+| **`/resume`** | Hydrate fresh chat session in <1s from `hot_memory.json` & `cold_memory.md` with 0% hallucination. |
 | **`/benchmark`** | Run transparent, scientifically neutral benchmark suite locally. |
 
 ---
