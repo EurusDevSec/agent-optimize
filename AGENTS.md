@@ -1,17 +1,25 @@
-# 💨 EURUS AGENT v2.0 - TIER 1 CONSTITUTION
+# 💨 EURUS AGENT v2.1 - HIGH-SEMANTIC ROUTER & TIER 1 CONSTITUTION
 
-> **Scope**: Always-On Core Constitution (<60 lines). Maximize 95%+ Prompt Caching discount.
+> **Header Budget**: <30 lines static header. Maximize 95%+ Prompt Caching discount. Zero guessing.
 
-## 1. System Context Architecture
-- **Tier 1 (Constitution)**: Read `AGENTS.md` and `.agent/rules/00-core.md` ONCE at boot.
-- **Tier 2 (Specialist Agents)**: Dynamically trigger agents in `.agent/agents/` based on file regex patterns (`*.sql`, `auth/*`, `tests/*`).
-- **Tier 3 (Knowledge Base)**: Query `.agent/memory/cold_memory.md` & MCP tools ON-DEMAND (`SELECTIVE` strategy).
+## 🧭 Intent-to-File Semantic Matrix (Deterministic Router)
 
-## 2. Core Execution Commandments
-- **Response Economy**: Keep responses < 3 sentences. Focus 100% on execution.
-- **Diff Standard**: Use ONLY Search & Replace Diff blocks (`<<<<<<< SEARCH`).
-- **Resource Guardrail**: NEVER run 20+ min full builds. Use fast local verification (<5s).
-- **Trajectory Sync**: Flush outdated file snapshots from context trajectory after `/build`.
+| Goal / Phase | Trigger / Command | Primary File Target | Secondary Context |
+| :--- | :--- | :--- | :--- |
+| **Onboarding** | `/init` | `.agent/docs/ARCHITECTURE.md` | `.agent/memory/hot_memory.json` |
+| **Contract Spec** | `/spec` | `.agent/specs/current-task.md` | `.agent/skills/spec/SKILL.md` |
+| **Spec Challenge**| `/challenge` | `.agent/specs/current-task.md` | `.agent/skills/challenge/SKILL.md` |
+| **Task Breakdown**| `/plan` | `.agent/specs/current-task.md` | `.agent/skills/plan/SKILL.md` |
+| **Diff Execution**| `/build` | `.agent/specs/current-task.md` | `.agent/scratchpad.md` |
+| **Control Verification**| `/test` | `.agent/skills/test/SKILL.md` | `.agent/memory/crash-report.json` |
+| **Constitutional Audit**| `/review`, `/simplify` | `.agent/rules/02-security.md` | `.agent/agents/*.md` |
+| **Ship & DoD Sync** | `/ship` | `.agent/references/definition-of-done.md` | `.agent/memory/hot_memory.json` |
+| **Session Snapshot**| `/save` | `.agent/skills/save/SKILL.md` | `.agent/memory/cold_memory.md` |
+| **Session Hydrate** | `/resume` | `.agent/skills/resume/SKILL.md` | `.agent/memory/hot_memory.json` |
+| **Context Reduction**| `/skeleton`, `/clear` | `.agent/skills/skeleton/SKILL.md` | `.agent/workflows/main-workflow.md` |
 
-## 3. Slash Commands Shortcuts
-`/init`, `/spec`, `/challenge`, `/plan`, `/build`, `/test`, `/review`, `/simplify`, `/ship`, `/save`, `/resume`, `/clear`, `/skeleton`, `/fetch-skill`, `/benchmark`, `/grill-me`
+## ⚡ Core Execution Rules
+1. **Zero Guessing**: Always read the target file specified in the matrix above matching active command.
+2. **Diff Block Standard**: Code edits MUST use Search & Replace Diff blocks (`<<<<<<< SEARCH`).
+3. **Fast Verification**: Test runner MUST execute isolated local checks (<5s).
+4. **Trajectory Sync**: Flush outdated file snapshots after `/build`.
