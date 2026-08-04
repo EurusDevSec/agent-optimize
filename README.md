@@ -21,7 +21,7 @@
 - **Hybrid Specs (Flat YAML + Gherkin)**: Defines data schemas in Flat YAML to eliminate "Format Tax" and uses Gherkin (`Given/When/Then`) for linear reasoning.
 - **`🥊 /challenge` Adversarial Audit**: Acts as an opposing Principal Engineer to stress-test specs for architectural feasibility and edge cases before unlocking `/plan`.
 - **`[NEEDS CLARIFICATION]` Freeze Pass**: Automatically freezes planning and asks structured clarification questions when user prompts are underspecified.
-- **Negative Space Boundaries**: Enforces explicit `# Out of Scope & Boundaries` (e.g. 3 negative bounds) to prevent scope creep and accidental side effects.
+- **Negative Space Boundaries & Pre-emptive Audit**: Enforces explicit `# Out of Scope & Boundaries` with Pre-emptive Pre-Build Interception (`/build`) before code generation to prevent token burn.
 - **Spec-as-Source & Checksum Traceability**: Binds SHA256 `spec_checksum` to Git commit hashes during `/ship` for 100% contract traceability.
 
 ### 🛡️ 2. Deterministic Control Plane & Safety Guardrails
@@ -36,10 +36,11 @@
   - **Tier 2 (Specialist Agents)**: `.agent/agents/` triggered dynamically via file regex (`*.sql`, `auth/*`).
   - **Tier 3 (Knowledge Base)**: `cold_memory.md` & MCP tools loaded ON-DEMAND.
 - **Trajectory Synchronization (CORVUS July 2026)**: Flushes outdated file snapshots after `/build`, cutting prompt length by 15–32% and reasoning cycles by 37%.
-- **`🦴 /skeleton` Context Virtualization**: Extracts Class signatures, function headers, and Type Annotations without loading 500+ line implementation code (**-85% token burn**).
+- **`🦴 /skeleton` Context Virtualization**: Extracts Class signatures, function headers, and Type Annotations with `--depth` control (`--depth=signatures` for -85% tokens vs `--depth=full` for metaprogrammed core files).
 
 ### 💾 4. Cross-Session Memory & Workflow Automation
-- **`💾 /save` Session Snapshot**: Captures active task progress, modified files, and failure lessons into `.agent/memory/`.
+- **`💾 /save` Session Snapshot**: Captures active task progress, modified files, failure lessons, and Git Checksum (`git rev-parse HEAD` & `git status`).
+- **`⚡ /resume` Git Drift Validation**: Validates Git commit hash & status on hydration. Issues `[GIT DRIFT DETECTED]` warning if local branch or files modified.
 - **`⚡ /resume` Zero-Hallucination Hydration**: Restores fresh chat sessions in <1 second (<100 tokens) with 0% memory loss.
 - **`🧊 cold_memory.md` Failure Archive**: Records historical bug patterns and workarounds so the AI never repeats past mistakes.
 - **`🚀 /init` 1-Minute Onboarding**: Auto-scans codebase topology and hydrates architecture into `.agent/` without touching dev configs.
