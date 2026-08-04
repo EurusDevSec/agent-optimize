@@ -4,7 +4,7 @@ description: Context Virtualization skill with --depth control flag (-85% tokens
 argument-hint: <file-or-dir-path> [--depth=signatures|full]
 ---
 
-# /skeleton Protocol v2.2 (Granular Virtualization Control)
+# /skeleton Protocol v2.3 (Granular Virtualization Control)
 
 Target: $ARGUMENTS
 

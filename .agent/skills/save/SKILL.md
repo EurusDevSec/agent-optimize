@@ -4,7 +4,7 @@ description: Take a complete snapshot of session state including Git commit hash
 argument-hint: [session-notes]
 ---
 
-# /save Protocol v2.2 (Git Checksum Snapshot)
+# /save Protocol v2.3 (Git Checksum Snapshot)
 
 Notes: $ARGUMENTS
 

@@ -3,7 +3,7 @@
     {
       "skill": "spec",
       "test_prompt": "Create a spec for adding password reset via email",
-      "expected_output_file": "specs/current-task.md"
+      "expected_output_file": "specs/SPEC-<id>_<name>.md"
     },
     {
       "skill": "test",
@@ -13,7 +13,7 @@
     {
       "skill": "ship",
       "test_prompt": "Ship current completed task",
-      "expected_behavior": "Updates hot_memory.json, archives specs/current-task.md, resets scratchpad.md"
+      "expected_behavior": "Updates hot_memory.json, archives specs/SPEC-<id>_<name>.md, resets scratchpad.md"
     }
   ]
 }

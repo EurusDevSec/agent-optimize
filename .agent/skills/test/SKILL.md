@@ -4,7 +4,7 @@ description: Run test runner with Deterministic Control Plane and Post-Mortem Cr
 argument-hint: [test-filter]
 ---
 
-# /test Protocol v2.1 (Post-Mortem Crash Reporting)
+# /test Protocol v2.3 (Post-Mortem Crash Reporting)
 
 Target: $ARGUMENTS
 

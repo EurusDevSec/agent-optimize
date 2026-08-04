@@ -4,7 +4,7 @@ description: Execute Level 3 sub-tasks via Diff blocks with Spec-Reflector 2-way
 argument-hint: [sub-task-item]
 ---
 
-# /build Protocol v2.2 (Spec-Reflector & Diff Execution)
+# /build Protocol v2.3 (Spec-Reflector & Diff Execution)
 
 1. Read active Spec Contract `.agent/specs/SPEC-<id>_<feature_name>.md`.
 2. **PRE-EMPTIVE BOUNDARY AUDIT**: Intercept diffs targeting `⛔ Negative Space Boundaries`.

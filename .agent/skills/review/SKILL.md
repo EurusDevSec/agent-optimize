@@ -4,7 +4,7 @@ description: Execute Constitutional SDD audit and refactoring with a hard 10,000
 argument-hint: [target-files]
 ---
 
-# /review & /simplify Protocol v2.1 (Token Budget Cap)
+# /review & /simplify Protocol v2.3 (Token Budget Cap)
 
 1. Read `.agent/rules/02-security.md` (Immutable Constitution).
 2. Execute **Constitutional Security Guardrail Audit** across Architect, Security Auditor, and DB Expert personas.
