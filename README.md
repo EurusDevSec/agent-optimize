@@ -1,9 +1,19 @@
-# 💨 EURUS AGENT v2.3 (`eurus-agent`)
+# 💨 EURUS AGENT v2.3
+> **Spec-Driven Agentic Architecture & Workflow Framework for AI Coding Engines (2026)**
 
-> **Universal High-Efficiency AI Agentic Backbone Framework**  
-> *SDD 2.0 Executable Contracts · Deterministic Control Plane · Trajectory Synchronization · Three-Tier Codified Context · 95%+ Token Economy*
+[![Version](https://img.shields.io/badge/version-2.3.0-blue.svg)](https://github.com/EurusDevSec/eurus-agent)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Prompt Caching](https://img.shields.io/badge/Prompt_Caching-95%25_Hit_Discount-brightgreen.svg)](#-architecture--token-economy)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+## 📌 What is Eurus Agent?
+
+**`eurus-agent` is NOT a compiler or standalone executable CLI.** 
+
+It is an **Open-Source Spec-Driven Agentic Configuration & Architecture Framework** designed to plug into AI Coding Engines (such as `jcode`, Cursor, Windsurf, Antigravity IDE, or Claude Code CLI). 
+
+It acts as the **"Engineering Process Operating System"** that governs how AI Agents plan, audit, execute, and verify code—transforming raw LLMs from guessing-prone coding assistants into deterministic, production-ready software engineering agents.
+
+---
 [![GitHub Stars](https://img.shields.io/github/stars/EurusDevSec/eurus-agent.svg)](https://github.com/EurusDevSec/eurus-agent)
 [![AI Research Backed](https://img.shields.io/badge/Research-Backed--2026-green.svg)](README.md#-research-references--open-source-foundations)
 
