@@ -1,14 +1,15 @@
 ---
 name: review
-description: Fast slash command /review to execute Constitutional SDD security audit and quality check
+description: Execute Constitutional SDD audit and refactoring with a hard 10,000 Output Token Budget Cap
 argument-hint: [target-files]
 ---
 
-# /review Protocol v2.0 (Constitutional SDD Audit)
+# /review & /simplify Protocol v2.1 (Token Budget Cap)
 
 1. Read `.agent/rules/02-security.md` (Immutable Constitution).
-2. Execute **Constitutional Security Guardrail Audit**:
-   - Scan diffs against Whitelisted packages and CWE security rules.
-   - Verify zero hardcoded credentials or un-sanitized boundary inputs.
-3. Perform Multi-Persona Review (Architect + Security Auditor + DB Expert).
-4. Output structured PASS / FAIL verdict.
+2. Execute **Constitutional Security Guardrail Audit** across Architect, Security Auditor, and DB Expert personas.
+3. **10,000 OUTPUT TOKEN BUDGET CAP**:
+   During code refactoring (`/simplify`), monitor generated output tokens:
+   - Maximum output token cap for refactor diffs: **10,000 tokens**.
+   - If refactor diff exceeds 10,000 tokens without persona consensus, FREEZE refactoring immediately.
+   - Retain the last working code snapshot and notify User.

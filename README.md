@@ -26,7 +26,7 @@
 flowchart TD
     Init["⚡ /init<br/><i>Onboard & Hydrate Repo</i>"] --> Grill["🎯 /grill-me<br/><i>Socratic Stress-Test</i>"]
     Grill --> Spec["📝 /spec & /plan<br/><i>Hybrid Specs & Gherkin Contracts</i>"]
-    Spec --> Build["🛠️ /build<br/><i>Diff Execution & Trajectory Sync</i>"]
+    Spec --> Challenge["🥊 /challenge<br/><i>Principal Engineer Audit</i>"] --> Plan["📝 /plan<br/><i>Task Checkboxes & Micro-Assertions</i>"] --> Build["🛠️ /build<br/><i>Diff Execution & Trajectory Sync</i>"]
     Build --> Test{"🧪 /test<br/><i>Verify & Control Plane</i>"}
     
     Test -- Pass --> Review["🔍 /review & /simplify<br/><i>Constitutional CSDD Audit</i>"]
@@ -68,6 +68,7 @@ Launch your preferred AI CLI (`jcode`, `antigravity`, `claude`) and run:
 | **`/fetch-skill`**| Semantically search, discover, and install domain skills on-demand. |
 | **`/skeleton`** | Context Virtualization: Extract type annotations & class signatures (-85% tokens). |
 | **`/spec`** | Create SDD 2.0 Executable Spec Contract (Flat YAML + Gherkin + Negative Space). |
+| **`/challenge`** | Adversarial Principal Engineer audit to stress-test spec before unlocking `/plan`. |
 | **`/plan`** | Deconstruct spec into atomic work checkboxes `[ ]` with Micro-Assertions. |
 | **`/build`** | Implement changes via Diff blocks with Trajectory Synchronization. |
 | **`/test`** | Run verification with Deterministic Control Plane Human Escalation. |

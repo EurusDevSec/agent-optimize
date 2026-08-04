@@ -14,4 +14,4 @@
 - **Trajectory Sync**: Flush outdated file snapshots from context trajectory after `/build`.
 
 ## 3. Slash Commands Shortcuts
-`/init`, `/spec`, `/plan`, `/build`, `/test`, `/review`, `/simplify`, `/ship`, `/save`, `/resume`, `/clear`, `/skeleton`, `/fetch-skill`, `/benchmark`, `/grill-me`
+`/init`, `/spec`, `/challenge`, `/plan`, `/build`, `/test`, `/review`, `/simplify`, `/ship`, `/save`, `/resume`, `/clear`, `/skeleton`, `/fetch-skill`, `/benchmark`, `/grill-me`
