@@ -7,5 +7,11 @@
   "learnings": [],
   "installed_dynamic_skills": [
     "fetch-skill"
-  ]
+  ],
+  "token_telemetry": {
+    "last_command_tokens": 1900,
+    "total_task_tokens": 3800,
+    "token_limit_alert_threshold": 50000,
+    "alert_status": "NORMAL"
+  }
 }

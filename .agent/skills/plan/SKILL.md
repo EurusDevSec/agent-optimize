@@ -1,14 +1,13 @@
 ---
 name: plan
-description: Fast slash command /plan to decompose spec into atomic tasks in current-task.md
-argument-hint: [optional-constraints]
+description: Fast slash command /plan to deconstruct spec into atomic work items with Micro-Assertion checks
+argument-hint: [spec-name]
 ---
 
-# /plan Protocol
+# /plan Protocol (Assertion-Led Planning)
 
-Constraints: $ARGUMENTS
-
-1. Read `specs/current-task.md`.
-2. Break down the goal into small, atomic checkboxes `[ ]` (under 15 mins per task).
-3. Identify potential architectural edge cases or security risks.
-4. Draft high-level execution steps in `.agent/scratchpad.md`.
+1. Read `.agent/specs/current-task.md`.
+2. Deconstruct spec into atomic tasks (< 15 mins work each).
+3. **MANDATORY MICRO-ASSERTION REQUIREMENT**:
+   For each task item, mandate a Micro-Assertion check to catch silent logic failures (e.g., `assert output.status_code == 200`, `assert isinstance(data, dict)`).
+4. Populate `.agent/specs/current-task.md` with atomic checkboxes `[ ]`.

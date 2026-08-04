@@ -16,6 +16,7 @@
 - `/init`: Auto-scan, hydrate, and onboard ANY codebase (New or Existing/Legacy).
 - `/benchmark`: Run transparent benchmark suite comparing baselines.
 - `/fetch-skill <keyword>`: Auto-download and register domain skills on-demand from Whitelisted Repos (`SELECTIVE` context).
+- `/skeleton <path>`: Extract type annotations & interface signatures (Context Virtualization).
 - `/grill-me <topic>`: Pressure-test plan/architecture via interactive Socratic interview.
 - `/spec <name>`: Define task contract in `.agent/specs/current-task.md`.
 - `/plan`: Deconstruct spec into atomic work checkboxes (`[ ]` < 15 mins each).

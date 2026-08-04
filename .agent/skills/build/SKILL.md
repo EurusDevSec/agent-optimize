@@ -1,14 +1,14 @@
 ---
 name: build
-description: Fast slash command /build to execute task implementation using Diff Blocks and auto-check completed tasks
-argument-hint: [task-number-or-name]
+description: Fast slash command /build to execute implementation using Diff Blocks and Micro-Assertion verification
+argument-hint: [task-item]
 ---
 
-# /build Protocol
+# /build Protocol (Assertion-Led Recovery)
 
 Focus: $ARGUMENTS
 
-1. Read `specs/current-task.md` and `.agent/scratchpad.md`.
+1. Read `.agent/specs/current-task.md` and `.agent/scratchpad.md`.
 2. Implement code changes ONLY using Search & Replace Diff blocks:
 
 <<<<<<< SEARCH
@@ -17,5 +17,7 @@ Focus: $ARGUMENTS
 [replacement code]
 >>>>>>> REPLACE
 
-3. **AUTO-CHECK TASK COMPLETION**:
-   Upon completing the diff implementation and passing verification of a task item, IMMEDIATELY update `specs/current-task.md` by changing `- [ ]` to `- [x]` for that specific item.
+3. **MICRO-ASSERTION FIRST RUN**:
+   Before running full test suites, execute the task's Micro-Assertion check to verify core logic connections.
+4. **AUTO-CHECK COMPLETION**:
+   Upon passing micro-assertion check, update `specs/current-task.md` by changing `- [ ]` to `- [x]`.
